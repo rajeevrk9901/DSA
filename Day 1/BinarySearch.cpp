@@ -31,6 +31,8 @@ int BinarySearch(int A[], int firsti, int lasti, int key)
     return -1;
 }
 
+//Github Test
+
 int main()
 {
     int A[] = {5, 7, 19, 21, 29, 34};
