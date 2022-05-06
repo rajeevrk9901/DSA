@@ -37,7 +37,7 @@ int main()
 {
     int A[] = {5, 7, 19, 21, 29, 34};
     int firsti = 0, lasti = 5;
-    int key = 27;
+    int key = 29;
     int result = BinarySearch(A, firsti, lasti, key);
 
     if (result == -1)
