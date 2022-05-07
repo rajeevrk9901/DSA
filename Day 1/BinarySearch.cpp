@@ -7,7 +7,6 @@ using namespace std;
 int BinarySearch(int A[], int firsti, int lasti, int key)
 {
     int mid = 0;
-
     if (firsti <= lasti)
     {
         mid = (firsti + lasti) / 2;
