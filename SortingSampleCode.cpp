@@ -12,7 +12,10 @@ void display(int A[], int n)
 void InsertionSort(int A[], int n)
 {
 
-    // Write Your Code Here
+    for (int i = 0; i < n; i++)
+    {
+        // Write Your Code Here
+    }
 }
 
 int main()
