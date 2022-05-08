@@ -11,7 +11,7 @@ void display(int A[], int n)
 
 void InsertionSort(int A[], int n)
 {
-    for (int i = 1; i < n; i++) //  NOTE Iteration Start From 1 Becuase We are A[0] Present In Sorted Array
+    for (int i = 1; i < n; i++) //  NOTE Iteration Start From 1 Becuase We moved A[0] In Sorted Array
     {
         int j = i - 1; // Means We Starting j with 0 // j=1-1 => 0
         int temp = A[i];
