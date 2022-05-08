@@ -11,24 +11,25 @@ void display(int A[], int n)
 
 void InsertionSort(int A[], int n)
 {
-    for (int i = 1; i < n; i++) //  NOTE  Iteration Start From 1 Becuase We moved A[0] In Sorted Array
+    // Write Your Code Here
+    for (int i = 1; i < n; i++)
     {
-        int j = i - 1; // Means We Starting j with 0 // j=1-1 => 0
+        int j = i - 1;
         int temp = A[i];
 
-        while (j > -1 && A[j] > temp) // j Means We Are Working on Sorting part
+        while (j > -1 && A[j] > temp)
         {
+
             A[j + 1] = A[j];
             j--;
         }
-
         A[j + 1] = temp;
     }
 }
 
 int main()
 {
-    int A[] = {5, 1, 9, 77, 4, 11, 88, 21, 34};
+    int A[] = {5, 1, 88, 9, 7, 4, 11, 21, 34};
     // int n = 9;
     int n = sizeof(A) / sizeof(A[0]);
     cout << "Total No.: " << n << "\n";

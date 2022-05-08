@@ -11,19 +11,8 @@ void display(int A[], int n)
 
 void InsertionSort(int A[], int n)
 {
-    for (int i = 1; i < n; i++) //  NOTE  Iteration Start From 1 Becuase We moved A[0] In Sorted Array
-    {
-        int j = i - 1; // Means We Starting j with 0 // j=1-1 => 0
-        int temp = A[i];
 
-        while (j > -1 && A[j] > temp) // j Means We Are Working on Sorting part
-        {
-            A[j + 1] = A[j];
-            j--;
-        }
-
-        A[j + 1] = temp;
-    }
+    // Write Your Code Here
 }
 
 int main()
