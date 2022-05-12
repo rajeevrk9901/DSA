@@ -22,21 +22,23 @@ void SelectionSort(int A[], int n)
 
     for (int i = 0; i < n - 1; i++)
     {
+
         int smallest = i;
+
         for (int j = i + 1; j < n; j++)
         {
-            if (A[j] < A[smallest])
-            {
+            if (A[smallest] > A[j])
+
                 smallest = j;
-            }
         }
+
         swap(&A[i], &A[smallest]);
     }
 }
 
 int main()
 {
-    int A[] = {5, 1, 9, 7, 4, 11, 8, 21, 3};
+    int A[] = {5, 1, 9, 77, 4, 11, 88, 21, 34, 2, 3};
     // int n = 9;
     int n = sizeof(A) / sizeof(A[0]);
     cout << "Total No.: " << n << "\n";
