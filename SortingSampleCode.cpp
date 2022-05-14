@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+
 void display(int A[], int n)
 {
     for (int i = 0; i < n; i++)
