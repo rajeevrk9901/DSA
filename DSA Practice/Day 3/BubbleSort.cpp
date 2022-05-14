@@ -4,7 +4,6 @@ using namespace std;
 void swap(int *a, int *b)
 {
     int temp;
-
     temp = *a;
     *a = *b;
     *b = temp;
@@ -37,7 +36,7 @@ void BubbleSort(int A[], int n)
 int main()
 {
     int A[] = {5, 1, 9, 77, 4, 11, 88, 34};
-    // int n = 8;
+    //int n = 8;
     int n = sizeof(A) / sizeof(A[0]);
     cout<<n<<"\n";
     BubbleSort(A, n);
