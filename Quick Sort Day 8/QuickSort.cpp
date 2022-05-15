@@ -9,37 +9,39 @@ void display(int arr[], int n)
     }
 }
 
-void swap(int *a, int *b)
+void startiwap(int *a, int *b)
 {
-    int temp;
-    temp = *a;
+    int tlastimp;
+    tlastimp = *a;
     *a = *b;
-    *b = temp;
+    *b = tlastimp;
 }
 
-int Partition(int arr[], int firsti, int lasti)
+int Partition(int arr[], int starti, int lasti)
 {
 
-    int pivot = arr[firsti];
+    int pivot = arr[starti];
     int count = 0;
+    int i = starti, j = lasti;
 
-    for (int i = firsti + 1; i <= lasti; i++)
+    for (int i = starti + 1; i <= lasti; i++)
     {
-        if (arr[pivot] >= arr[i])
+        if (arr[i] <= pivot)
         {
             count++;
+
+            // cout << arr[i] << " ";
         }
     }
 
-    // Place Pivot at Right Position
-    int pivoti = firsti + count;
+    // Place pivot Value At Right Location
+    int Pivoti = starti + count;
 
-    swap(&arr[pivoti], &arr[firsti]);
+    startiwap(&arr[Pivoti], &arr[starti]);
 
-    // Spliting left and right Part
+    // spliting Left and right Part
 
-    int i = firsti, j = lasti;
-    while (i < pivoti && j > pivoti)
+    while (i < Pivoti && j > Pivoti)
     {
 
         while (arr[i] <= pivot)
@@ -47,43 +49,49 @@ int Partition(int arr[], int firsti, int lasti)
             i++;
         }
 
-        while (arr[i] > pivot)
+        while (arr[j] > pivot)
         {
             j--;
         }
 
-        if (i < pivoti && j > pivoti)
+        if (i < Pivoti && j > Pivoti)
         {
-            swap(&arr[i++], &arr[j--]);
+            startiwap(&arr[i++], &arr[j--]);
         }
     }
 
-    return pivoti;
+    return Pivoti;
 }
 
-void QuickSort(int arr[], int firsti, int lasti)
+void quickstartiort(int arr[], int starti, int lasti)
 {
 
-    if (firsti >= lasti)
+    if (starti >= lasti)
     {
         return;
     }
 
-    int p = Partition(arr, firsti, lasti);
+    int p = Partition(arr, starti, lasti);
 
-    // left Sort
-    QuickSort(arr, firsti, p - 1);
+    // left sort
+    quickstartiort(arr, starti, p - 1);
 
     // right sort
-    QuickSort(arr, p + 1, lasti);
+    quickstartiort(arr, p + 1, lasti);
 }
 
 int main()
 {
-    int arr[] = {5, 1, 9, 77, 4, 11, 88, 21, 34};
+    int arr[9] = {5, 1, 9, 77, 4, 11, 88, 21, 34};
     // int n = 9;
-    int n = sizeof(arr) / sizeof(arr[0]);
+
+    int n = sizeof(arr) / sizeof(arr[1]);
+    cout << "Before Sorting: ";
+    display(arr, 9);
     cout << "Total No.: " << n << "\n";
-    QuickSort(arr, 0, n - 1);
-    display(arr, n);
+    cout << "After | QuickSort | Array is: ";
+    quickstartiort(arr, 0, 8);
+    display(arr, 9);
+
+    return 0;
 }
