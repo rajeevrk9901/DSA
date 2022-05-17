@@ -9,12 +9,12 @@ void display(int arr[], int n)
     }
 }
 
-void startiwap(int *a, int *b)
+void swap(int *a, int *b)
 {
-    int tlastimp;
-    tlastimp = *a;
+
+    int temp = *a;
     *a = *b;
-    *b = tlastimp;
+    *b = temp;
 }
 
 int Partition(int arr[], int starti, int lasti)
@@ -29,15 +29,15 @@ int Partition(int arr[], int starti, int lasti)
         if (arr[i] <= pivot)
         {
             count++;
-
-            // cout << arr[i] << " ";
         }
     }
+
+    // cout << count;
 
     // Place pivot Value At Right Location
     int Pivoti = starti + count;
 
-    startiwap(&arr[Pivoti], &arr[starti]);
+    swap(&arr[Pivoti], &arr[starti]);
 
     // spliting Left and right Part
 
@@ -56,7 +56,7 @@ int Partition(int arr[], int starti, int lasti)
 
         if (i < Pivoti && j > Pivoti)
         {
-            startiwap(&arr[i++], &arr[j--]);
+            swap(&arr[i++], &arr[j--]);
         }
     }
 
